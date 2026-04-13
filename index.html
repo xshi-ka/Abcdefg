@@ -1,57 +1,30 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surprise Birthday</title>
-</head>
-<body style="margin:0;font-family:Arial,sans-serif;background:#f4f4f4;">
+<section style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-family:Arial, sans-serif;
+padding:20px;
+background:
+radial-gradient(circle at 20% 20%, rgba(255,0,100,.25), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(0,200,255,.25), transparent 40%),
+linear-gradient(135deg,#020617,#0f172a,#020617);
+overflow:hidden;
+">
 
-  <section style="text-align:center;padding:80px 20px;">
-    <h1>Hai, siapa namamu? 😊</h1>
-    <p>Masukkan nama kamu dulu ya...</p>
+<h1 style="
+color:white;
+font-size:clamp(38px,10vw,85px);
+font-weight:900;
+letter-spacing:3px;
+line-height:1.2;
+margin:0;
+text-shadow:
+0 0 15px rgba(255,255,255,.3),
+0 0 40px rgba(255,0,120,.3);
+">
+nothing here,<br>get lost 👀
+</h1>
 
-    <input id="namaInput"
-      type="text"
-      placeholder="Nama kamu..."
-      style="padding:12px;border-radius:8px;border:1px solid #ccc;margin-top:10px;">
-
-    <br><br>
-
-    <button onclick="cekNama()"
-      style="background:#ff6384;color:white;border:none;padding:14px 28px;border-radius:12px;font-weight:bold;cursor:pointer;">
-      Yakin?
-    </button>
-
-    <p id="errorText" style="color:red;"></p>
-
-    <div id="surpriseBox" style="display:none;margin-top:30px;">
-      <h2>🎉 HAPPY BIRTHDAY TIA 🎉</h2>
-      <p>Selamat ulang tahun! Semoga bahagia selalu ✨</p>
-
-      <br>
-
-      <a href="https://www.youtube.com/watch?v=GTXUWhmjCog" target="_blank"
-         style="display:inline-block;background:#222;color:white;text-decoration:none;padding:12px 24px;border-radius:12px;font-weight:bold;">
-        ojo di klik
-      </a>
-    </div>
-  </section>
-
-  <script>
-    function cekNama() {
-      const namaBenar = "Tia";
-      const input = document.getElementById("namaInput").value.trim();
-
-      if (input.toLowerCase() === namaBenar.toLowerCase()) {
-        document.getElementById("surpriseBox").style.display = "block";
-        document.getElementById("errorText").innerText = "";
-      } else {
-        document.getElementById("surpriseBox").style.display = "none";
-        document.getElementById("errorText").innerText = "Eh namamu lo siapa? kok nglebokne wong lio";
-      }
-    }
-  </script>
-
-</body>
-</html>
+</section>
