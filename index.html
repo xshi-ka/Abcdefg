@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Birthday</title>
+</head>
+<body style="margin:0;font-family:Arial,sans-serif;background:#f4f4f4;">
+
+  <section style="text-align:center;padding:80px 20px;">
+    <h1>Hai, siapa namamu? 😊</h1>
+    <p>Masukkan nama kamu dulu ya...</p>
+
+    <input id="namaInput"
+      type="text"
+      placeholder="Nama kamu..."
+      style="padding:12px;border-radius:8px;border:1px solid #ccc;margin-top:10px;">
+
+    <br><br>
+
+    <button onclick="cekNama()"
+      style="background:#ff6384;color:white;border:none;padding:14px 28px;border-radius:12px;font-weight:bold;cursor:pointer;">
+      Yakin?
+    </button>
+
+    <p id="errorText" style="color:red;"></p>
+
+    <div id="surpriseBox" style="display:none;margin-top:30px;">
+      <h2>🎉 HAPPY BIRTHDAY TIA 🎉</h2>
+      <p>Selamat ulang tahun! Semoga bahagia selalu ✨</p>
+    </div>
+  </section>
+
+  <script>
+    function cekNama() {
+      const namaBenar = "Tia";
+      const input = document.getElementById("namaInput").value.trim();
+
+      if (input.toLowerCase() === namaBenar.toLowerCase()) {
+        document.getElementById("surpriseBox").style.display = "block";
+        document.getElementById("errorText").innerText = "";
+      } else {
+        document.getElementById("surpriseBox").style.display = "none";
+        document.getElementById("errorText").innerText = "Hmm... kayaknya bukan kamu 😆";
+      }
+    }
+  </script>
+
+</body>
+</html>
